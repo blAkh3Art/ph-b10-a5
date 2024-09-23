@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flood Donation Fund Raiser</title>
+    <title>Flood Donation Fund Raiser Home</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
 
         <!-- Daisy Ui & Tailwind cdn -->
@@ -38,9 +38,9 @@
 </head>
 <body class="fontLexend">
    
-        <!-- This is NavBar -->
-        <header>
-            <section class="bg-nav-bg">
+        <!-- NavBar -->
+        <header class="bg-nav-bg sticky top-0 z-10 pb-2">
+            <section class="">
               <div class="navbar max-w-screen-xl mx-auto">
                 <div class="navbar-start">
                   <div class="dropdown">
@@ -70,7 +70,8 @@
                       </li>
                     </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl bg-primary-color">Blog</a>
+                  <a href="blog.html" class="btn btn-ghost text-xl bg-primary-color"
+                  >Blog</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
@@ -92,11 +93,17 @@
                       </div>
                     </div>
                   </section>
-                  <div class="my-10 mt-20 flex items-center justify-center gap-4">
-                    <button id="btn-donation" class="btn btn-lg bg-primary-color">
+                  <div class="my-10 flex items-center justify-center gap-4">
+                    <button
+                      id="btn-donation"
+                      class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-primary-color">
                       Donation
                     </button>
-                    <button id="btn-history" class="btn btn-lg btn-outline">History</button>
+                    <button
+                    id="btn-history"
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline">
+                    History
+                  </button>
                   </div>
           </header>
           <main class="mb-20">
@@ -105,7 +112,7 @@
 
               <!-- card 1 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-2 p-6"
+                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6"
               >
                 <figure class=" ">
                   <img
@@ -141,14 +148,14 @@
                   <button
                   onclick="my_modal_5.showModal()"
                   id="noakhli-donate-now"
-                  class="btn bg-primary-color text-lg">
+                  class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>
               </div>
               <!-- card 2 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-2 p-6"
+                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6"
               >
                 <figure class=" ">
                   <img
@@ -187,14 +194,14 @@
                   <button
                   onclick="my_modal_5.showModal()"
                   id="feni-donate-now"
-                  class="btn bg-primary-color text-lg">
+                  class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>
               </div>
               <!-- card 3 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-2 p-6"
+                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6"
               >
                 <figure class=" ">
                   <img
@@ -235,7 +242,7 @@
                   <button
                   onclick="my_modal_5.showModal()"
                   id="quota-donate-now"
-                  class="btn bg-primary-color text-lg">
+                  class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>

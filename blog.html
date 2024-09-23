@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Donation Fund Raiser Blog</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Daisy Ui & Tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "rgb(180, 244, 97)",
+              "nav-bg": "rgb(249, 247, 243);",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap");
+      .fontLexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="fontLexend">
+    <!-- NavBar -->
+    <header class="bg-nav-bg sticky top-0 z-10 pb-2">
+      <section class="">
+        <div class="navbar max-w-screen-xl mx-auto">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <span class="text-lg md:text-2xl font-bold"
+                    >Donate Bangladesh</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <a
+              href="index.html"
+              class="btn btn-ghost text-xl bg-primary-color"
+              >Home</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <div class="flex items-center justify-center gap-2">
+                  <img src="assets/logo.png" alt="" srcset="" />
+                  <span class="text-2xl font-bold">Donate Bangladesh</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="flex items-center justify-center gap-1">
+              <img src="assets/coin.png" alt="" />
+              <p class="text-xl font-bold">
+                <span id="main-balance">5500</span> BDT
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="max-w-screen-xl mx-auto">
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is like a blueprint for a webpage.
+            It organizes all the elements (like text, images, buttons) into a
+            structured tree, where each part of the page is represented as an
+            object. This lets you use JavaScript to change, add, or remove parts
+            of the page dynamically. For example, when you click a button to
+            load new content without reloading the page, the DOM is what allows
+            that to happen.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p class="font-semibold">
+            To select an element from the DOM using JavaScript, you can use
+            various methods:
+          </p>
+          <br />
+          <ul>
+            <li>
+              1. document.getElementById("id"): Selects an element by its id
+              attribute.
+            </li>
+            <li>
+              2. document.getElementsByClassName("class"): Selects elements by
+              their class attribute (returns a live HTMLCollection).
+            </li>
+            <li>
+              3. document.getElementsByTagName("tag"): Selects elements by their
+              tag name (returns an HTMLCollection).
+            </li>
+            <li>
+              4. document.querySelector("selector"): Selects the first element
+              that matches a CSS selector (id, class, tag, etc.).
+            </li>
+            <li>
+              5. document.querySelectorAll("selector"): Selects all elements
+              that match a CSS selector (returns a static NodeList).
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique where you attach a single event
+            listener to a parent element to manage events for multiple child
+            elements, even if they are added dynamically. Instead of adding
+            individual listeners to each child, the parent listens for events
+            that bubble up from the children (thanks to event propagation).
+          </p>
+          <br />
+          <p class="font-semibold">This is useful because:</p>
+          <br />
+          <ul>
+            <li>
+              Efficiency: Instead of attaching multiple event listeners, you use
+              a single one on the parent element. This is particularly
+              beneficial when handling large numbers of elements.
+            </li>
+            <li>
+              Dynamic content: It allows handling events on elements added to
+              the DOM after the initial page load, which wouldn't have event
+              listeners if added dynamically.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            You can manipulate an element's attributes and styles using
+            JavaScript through the DOM.
+          </p>
+          <br />
+          <p class="font-semibold">Manipulating Attributes:</p>
+          <br />
+          <ul>
+            <li>
+              1. element.setAttribute("attribute", "value"): Adds or changes the
+              specified attribute.
+            </li>
+            <li>
+              2. element.getAttribute("attribute"): Retrieves the value of the
+              specified attribute.
+            </li>
+            <li>
+              3. element.removeAttribute("attribute"): Removes the specified
+              attribute.
+            </li>
+          </ul> <br>
+          <p class="font-semibold">Manipulating Styles:</p>
+          <p>
+            You can manipulate an element's inline styles using the style
+            property
+          </p>
+          <ul>
+            <br />
+            <li>1. element.classList.add("class-name"): Adds a class.</li>
+            <li>2. element.classList.remove("class-name"): Removes a class.</li>
+            <li>
+              3. element.classList.toggle("class-name"): Toggles a class on and
+              off
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

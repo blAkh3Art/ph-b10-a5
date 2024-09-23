@@ -6,6 +6,12 @@ const cards = document.getElementById("cards");
 // Donate Toggle Button
 document.getElementById("btn-donation").addEventListener("click", function () {
 
+    // donationButton.classList.add("bg-primary-color");
+  // donationButton.classList.remove("btn-outline");
+
+  // historyButton.classList.remove("bg-primary-color");
+  // historyButton.classList.add("btn-outline");
+
   historySection.classList.add("hidden");
   cards.classList.remove("hidden");
   activeButton("btn-donation");
@@ -13,6 +19,11 @@ document.getElementById("btn-donation").addEventListener("click", function () {
 });
 //  History Toggle Button
 document.getElementById("btn-history").addEventListener("click", function () {
+
+    // historyButton.classList.add("bg-primary-color");
+  // historyButton.classList.remove("btn-outline");
+  // donationButton.classList.remove("bg-primary-color");
+  // donationButton.classList.add("btn-outline");
  
   cards.classList.add("hidden");
   historySection.classList.remove("hidden");
@@ -26,6 +37,14 @@ document
   .getElementById("noakhli-donate-now")
   .addEventListener("click", function () {
     const donateAmount = getInputValueById("input-noakhali");
+
+        // if (donateAmount === "number") {
+    //   alert("Please Type valid amount ");
+    //   document.getElementById("noakhli-donate-now").onclick = null;
+    //   document.getElementById("noakhli-donate-now").removeAttribute("onclick");
+
+    //   return;
+    // }
   
     const cardAmount = getTextValueById("amount-noakhali");
     const mainBalance = getTextValueById("main-balance");
