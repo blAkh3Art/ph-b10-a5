@@ -39,38 +39,12 @@
 <body class="fontLexend">
    
         <!-- NavBar -->
-        <header class="bg-nav-bg sticky top-0 z-10 pb-2">
+        <header class="sticky top-0 z-10 backdrop-blur-md">
             <section class="">
               <div class="navbar w-11/12 md:max-w-screen-lg mx-auto">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16"
-                        />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li>
-                        <span class="text-lg md:text-2xl font-bold"
-                          >Donate Bangladesh</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <a href="blog.html" class="btn btn-ghost text-xl bg-primary-color"
+                  <a href="blog.html"
+                  class="btn rounded-xl btn-ghost text-sm md:text-lg bg-primary-color"
                   >Blog</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
@@ -87,7 +61,7 @@
                         <div class="flex items-center justify-center gap-1">
                           <img src="./assets/coin.png" alt="" />
                           <p class="text-xl font-bold">
-                            <span id="main-balance">5500</span> BDT
+                            <span id="main-balance">999999</span> BDT
                           </p>
                         </div>
                       </div>
@@ -96,12 +70,12 @@
                   <div class="my-10 flex items-center justify-center gap-4">
                     <button
                       id="btn-donation"
-                      class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-primary-color">
+                      class="btn rounded-xl btn-xs sm:btn-sm md:btn-md bg-primary-color">
                       Donation
                     </button>
                     <button
                     id="btn-history"
-                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline">
+                    class="btn rounded-xl btn-xs sm:btn-sm md:btn-md btn-outline">
                     History
                   </button>
                   </div>
@@ -112,18 +86,18 @@
 
               <!-- card 1 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
+                class="card lg:card-side bg-base-100 border border-solid rounded-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
               >
                 <figure class=" ">
                   <img
-                    class="w-full h-5/6"
+                    class="w-full h-5/6 rounded-xl"
                     src="assets/noakhali.png"
                     alt="Donate for Flood at Noakhali, Bangladesh"
                   />
                 </figure>
                 <div class="card-body">
                   <div class="mb-4">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn rounded-xl">
                       <p class="flex items-center justify-center gap-1">
                         <img src="assets/coin.png" alt="" />
                         <span id="amount-noakhali" class="text-sm font-bold">0 BDT</span>
@@ -143,29 +117,29 @@
                     id="input-noakhali"
                     type="text"
                     placeholder="Write Donation Amount"
-                    class="input input-bordered w-full my-4"
+                    class="input input-bordered w-full my-4 rounded-xl"
                   />
                   <button
                   id="noakhli-donate-now"
-                  class="btn bg-primary-color text-base md:text-lg">
+                  class="btn rounded-xl bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>
               </div>
               <!-- card 2 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
+                class="card lg:card-side bg-base-100 border border-solid rounded-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
               >
                 <figure class=" ">
                   <img
-                    class="w-full h-5/6"
+                    class="w-full h-5/6 rounded-xl"
                     src="assets/feni.png"
                     alt="Donate for Flood at feni, Bangladesh"
                   />
                 </figure>
                 <div class="card-body">
                   <div class="mb-4">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn rounded-xl">
                       <p class="flex items-center justify-center gap-1">
                         <img src="assets/coin.png" alt="" />
                         <span id="amount-feni" class="text-sm font-bold">0 BDT</span>
@@ -189,28 +163,28 @@
                     id="input-feni"
                     type="text"
                     placeholder="Write Donation Amount"
-                    class="input input-bordered w-full my-4"/>
+                    class="input input-bordered w-full my-4 rounded-xl"/>
                   <button
                   id="feni-donate-now"
-                  class="btn bg-primary-color text-base md:text-lg">
+                  class="btn rounded-xl bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>
               </div>
               <!-- card 3 -->
               <div
-                class="card lg:card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
+                class="card lg:card-side bg-base-100 border border-solid rounded-xl grid grid-cols-1 md:grid-cols-2 p-6 mb-4"
               >
                 <figure class=" ">
                   <img
-                    class="w-full h-5/6"
+                    class="w-full h-5/6 rounded-xl"
                     src="assets/quota-protest.png"
                     alt="Donate for Injured in Quota Movement, Bangladesh"
                   />
                 </figure>
                 <div class="card-body">
                   <div class="mb-4">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn rounded-xl">
                       <p class="flex items-center justify-center gap-1">
                         <img src="assets/coin.png" alt="" />
                         <span id="amount-quota" class="text-sm font-bold">0 BDT</span>
@@ -234,10 +208,10 @@
                     id="input-quota"
                     type="text"
                     placeholder="Write Donation Amount"
-                    class="input input-bordered w-full my-4"/>
+                    class="input input-bordered w-full my-4 rounded-xl"/>
                   <button
                   id="quota-donate-now"
-                  class="btn bg-primary-color text-base md:text-lg">
+                  class="btn rounded-xl bg-primary-color text-base md:text-lg">
                   Donate Now
                 </button>
                 </div>
@@ -264,7 +238,7 @@
           <div class="modal-action">
             <form method="dialog">
               <!-- if a button available in form, it will close the modal -->
-              <button class="btn">Close Information</button>
+              <button class="btn rounded-lg">Close Information</button>
             </form>
           </div>
         </div>
