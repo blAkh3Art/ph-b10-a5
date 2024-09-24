@@ -25,7 +25,7 @@ document.getElementById("btn-history").addEventListener("click", function () {
 document
   .getElementById("noakhli-donate-now")
   .addEventListener("click", function () {
-    const donateAmount = getInputValueById("input-noakhali");
+    let donateAmount = document.getElementById("input-noakhali").value;
     const cardAmount = getTextValueById("amount-noakhali");
     const mainBalance = getTextValueById("main-balance");
     if (isNaN(donateAmount) || donateAmount <= 0) {
@@ -39,6 +39,7 @@ document
       return;
     }
 
+    donateAmount = getInputValueById("input-noakhali");
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-noakhali").innerText = totalDonateAmount;
     document.getElementById("input-noakhali").value = "";
@@ -51,10 +52,11 @@ document
       history(donateAmount, historyTitle);
   });
 
+  //Feni Card
 document
   .getElementById("feni-donate-now")
   .addEventListener("click", function () {
-    const donateAmount = getInputValueById("input-feni");
+    let donateAmount = document.getElementById("input-feni").value;
     const cardAmount = getTextValueById("amount-feni");
     const mainBalance = getTextValueById("main-balance");
 
@@ -68,7 +70,7 @@ document
       alert("Failed to Donate ");
       return;
     }
-
+    donateAmount = getInputValueById("input-feni");
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-feni").innerText = totalDonateAmount;
     document.getElementById("input-feni").value = "";
@@ -80,10 +82,12 @@ document
       historyTitle = document.getElementById("title-feni").innerText;
       history(donateAmount, historyTitle);
   });
+
+  //Quota Movement Card
 document
   .getElementById("quota-donate-now")
   .addEventListener("click", function () {
-    const donateAmount = getInputValueById("input-quota");
+    let donateAmount = document.getElementById("input-quota").value;
     const cardAmount = getTextValueById("amount-quota");
     const mainBalance = getTextValueById("main-balance");
     if (isNaN(donateAmount) || donateAmount <= 0) {
@@ -97,6 +101,7 @@ document
       return;
     }
 
+    donateAmount = getInputValueById("input-quota");
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-quota").innerText = totalDonateAmount;
     document.getElementById("input-quota").value = "";
