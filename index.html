@@ -116,7 +116,7 @@
               >
                 <figure class=" ">
                   <img
-                    class="w-full"
+                    class="w-full h-5/6"
                     src="assets/noakhali.png"
                     alt="Donate for Flood at Noakhali, Bangladesh"
                   />
@@ -130,7 +130,7 @@
                       </p>
                     </a>
                   </div>
-                  <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+                  <h2 id="noakhali-title" class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                   <p>
                     The recent floods in Noakhali have caused significant damage to
                     homes infrastructure. Your donation will help provide essential
@@ -146,7 +146,6 @@
                     class="input input-bordered w-full my-4"
                   />
                   <button
-                  onclick="my_modal_5.showModal()"
                   id="noakhli-donate-now"
                   class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
@@ -159,9 +158,9 @@
               >
                 <figure class=" ">
                   <img
-                    class="w-full"
+                    class="w-full h-5/6"
                     src="assets/feni.png"
-                    alt="Donate for Flood at Noakhali, Bangladesh"
+                    alt="Donate for Flood at feni, Bangladesh"
                   />
                 </figure>
                 <div class="card-body">
@@ -173,7 +172,7 @@
                       </p>
                     </a>
                   </div>
-                  <h2 class="card-title">
+                  <h2 id="title-feni" class="card-title">
                     Donate for Flood Relief in Feni,Bangladesh
                   </h2>
                   <p>
@@ -192,7 +191,6 @@
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full my-4"/>
                   <button
-                  onclick="my_modal_5.showModal()"
                   id="feni-donate-now"
                   class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
@@ -205,24 +203,22 @@
               >
                 <figure class=" ">
                   <img
-                    class="w-full"
+                    class="w-full h-5/6"
                     src="assets/quota-protest.png"
-                    alt="Donate for Flood at Noakhali, Bangladesh"
+                    alt="Donate for Injured in Quota Movement, Bangladesh"
                   />
                 </figure>
                 <div class="card-body">
                   <div class="mb-4">
-                    <div class="">
-                        <a href="#" class="btn flex items-center justify-center gap-1">
+                    <a href="#" class="btn">
+                      <p class="flex items-center justify-center gap-1">
                         <img src="assets/coin.png" alt="" />
-                        <p>
-                            <span id="amount-quota" class="text-sm font-bold">0</span>
-                            BDT
-                          </p>
-                        </a>
-                      </div>
+                        <span id="amount-quota" class="text-sm font-bold">0 BDT</span>
+                      </p>
+                    </a>
                   </div>
-                  <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+
+                  <h2 id="title-quota" class="card-title">Aid for Injured in the Quota Movement</h2>
                   <p>
                     The recent Quota movement has resulted in numerous injuries and
                     significant hardship for many individuals. Your support is crucial
@@ -240,7 +236,6 @@
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full my-4"/>
                   <button
-                  onclick="my_modal_5.showModal()"
                   id="quota-donate-now"
                   class="btn bg-primary-color text-base md:text-lg">
                   Donate Now
@@ -255,14 +250,7 @@
           <span class="text-primary-color text-3xl">Donation</span> History
         </h2>
         <div class="divider"></div>
-        <div class="border-2 border-gray-300 rounded-lg p-6">
-          <h2 class="text-xl font-bold mb-2">
-            Taka is Donated for Flood Relief in Feni,Bangladesh
-          </h2>
-          <p class="text-sm text-gray-500">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
+        <div class="history-container"></div>
       </section>
 
             <!-- Modal Notification -->

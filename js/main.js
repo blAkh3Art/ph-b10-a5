@@ -6,12 +6,6 @@ const cards = document.getElementById("cards");
 // Donate Toggle Button
 document.getElementById("btn-donation").addEventListener("click", function () {
 
-    // donationButton.classList.add("bg-primary-color");
-  // donationButton.classList.remove("btn-outline");
-
-  // historyButton.classList.remove("bg-primary-color");
-  // historyButton.classList.add("btn-outline");
-
   historySection.classList.add("hidden");
   cards.classList.remove("hidden");
   activeButton("btn-donation");
@@ -20,11 +14,6 @@ document.getElementById("btn-donation").addEventListener("click", function () {
 //  History Toggle Button
 document.getElementById("btn-history").addEventListener("click", function () {
 
-    // historyButton.classList.add("bg-primary-color");
-  // historyButton.classList.remove("btn-outline");
-  // donationButton.classList.remove("bg-primary-color");
-  // donationButton.classList.add("btn-outline");
- 
   cards.classList.add("hidden");
   historySection.classList.remove("hidden");
 
@@ -37,17 +26,18 @@ document
   .getElementById("noakhli-donate-now")
   .addEventListener("click", function () {
     const donateAmount = getInputValueById("input-noakhali");
-
-        // if (donateAmount === "number") {
-    //   alert("Please Type valid amount ");
-    //   document.getElementById("noakhli-donate-now").onclick = null;
-    //   document.getElementById("noakhli-donate-now").removeAttribute("onclick");
-
-    //   return;
-    // }
-  
     const cardAmount = getTextValueById("amount-noakhali");
     const mainBalance = getTextValueById("main-balance");
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("noakhli-donate-now");
+      return;
+    }
+    if (donateAmount > mainBalance) {
+      document.getElementById("noakhli-donate-now").removeAttribute("onclick");
+      alert("Failed to Donate ");
+      return;
+    }
 
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-noakhali").innerText = totalDonateAmount;
@@ -55,6 +45,10 @@ document
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+      my_modal_5.showModal();
+      //history add
+      historyTitle = document.getElementById("noakhali-title").innerText;
+      history(donateAmount, historyTitle);
   });
 
 document
@@ -64,12 +58,27 @@ document
     const cardAmount = getTextValueById("amount-feni");
     const mainBalance = getTextValueById("main-balance");
 
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("feni-donate-now");
+      return;
+    }
+    if (donateAmount > mainBalance) {
+      onclickDisable("feni-donate-now");
+      alert("Failed to Donate ");
+      return;
+    }
+
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-feni").innerText = totalDonateAmount;
     document.getElementById("input-feni").value = "";
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+      my_modal_5.showModal();
+      //history added
+      historyTitle = document.getElementById("title-feni").innerText;
+      history(donateAmount, historyTitle);
   });
 document
   .getElementById("quota-donate-now")
@@ -77,6 +86,16 @@ document
     const donateAmount = getInputValueById("input-quota");
     const cardAmount = getTextValueById("amount-quota");
     const mainBalance = getTextValueById("main-balance");
+    if (isNaN(donateAmount) || donateAmount <= 0) {
+      alert("Please Type a valid amount ");
+      onclickDisable("quota-donate-now");
+      return;
+    }
+    if (donateAmount > mainBalance) {
+      onclickDisable("quota-donate-now");
+      alert("Failed to Donate ");
+      return;
+    }
 
     const totalDonateAmount = cardAmount + donateAmount;
     document.getElementById("amount-quota").innerText = totalDonateAmount;
@@ -84,4 +103,8 @@ document
 
     document.getElementById("main-balance").innerText =
       mainBalance - donateAmount;
+      my_modal_5.showModal();
+      //history add
+      historyTitle = document.getElementById("title-quota").innerText;
+      history(donateAmount, historyTitle);
   });

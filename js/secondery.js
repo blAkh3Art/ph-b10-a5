@@ -16,3 +16,30 @@ function activeButton(id) {
   function getTextValueById(id) {
     return parseFloat(document.getElementById(id).innerText);
   }
+
+  function onclickDisable(id) {
+    document.getElementById(id).onclick = false;
+  }
+  function history(id, title) {
+    const historyContainer = document.getElementById("history-section");
+    const historyItem = document.createElement("div");
+    historyItem.classList.add(
+      "border-2",
+      "border-gray-300",
+      "rounded-lg",
+      "p-6",
+      "mb-4"
+    );
+    historyItem.innerHTML = `
+  <p class="text-xl font-bold mb-2"> 
+           ${id} Taka is ${title}
+          </p>
+          <p class="text-sm text-gray-500">
+          ${new Date().toLocaleString(Date, TimeRanges)}
+           
+          </p>
+    
+    `;
+    historyContainer.appendChild(historyItem);
+    historyItem.insertBefore(historyItem.firstChild);
+  }
